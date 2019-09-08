@@ -47,10 +47,11 @@ public class Pizza {
 	@Override
 	public String toString() {
 		String s = "";
-		s = s + "Pizza type:" + type + ", " + "size:" + size + ", " + "top:";
+		s = s + "Pizza type:" + type + "\n" + "size:" + size + "\n" + "top:";
 		for (int i = 0; i < this.top.size(); i++) {
 			s = s + top.get(i) + " ";
 		}
+		s = s + "\n";
 		return s;
 	}
 }

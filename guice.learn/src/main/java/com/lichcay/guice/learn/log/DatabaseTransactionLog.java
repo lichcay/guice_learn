@@ -7,14 +7,25 @@ import com.lichcay.guice.learn.entity.Pizza;
 public class DatabaseTransactionLog implements TransactionLog {
 	private List<Pizza> food;
 
+	private String db = "mysql";
 	private String cost = "$80";
-
 	private String cash = "$100";
 	private String change = "$20";
+
 	public void doLog() {
 		System.out.println(this.getClass().toString());
-		System.out.println("Pizza cost "+cost+", get cash "+cash+", give change "+change);
+		System.out.println(
+				"Pizza cost " + cost + ", get cash " + cash + ", give change " + change + ". Using " + db + ".");
 	}
+
+	public String getDb() {
+		return db;
+	}
+
+	public void setDb(String db) {
+		this.db = db;
+	}
+
 	public List<Pizza> getFood() {
 		return food;
 	}
